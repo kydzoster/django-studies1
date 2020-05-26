@@ -115,3 +115,9 @@
 6. pipenv install gunicorn==20.0.4
 7. Inside *pages_project/settings.py* change one-line code **ALLOWED_HOSTS = []** to **ALLOWED_HOSTS = ['*']** this is a security measure against HTTP Host header attacks, * means that all domains are acceptable.
 8. check **git status** for changes we made
+9. git add .
+10. git commit-m"Heroku deployment"
+11. git push -u origin master
+12. **heroku create** to create a new app on Heroku website
+13. disable static files like CSS and JS with **heroku config:set DISABLE_COLLECTSTATIC=1**
+14. 
