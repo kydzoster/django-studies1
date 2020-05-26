@@ -101,3 +101,17 @@
 2. git add .
 3. git commit -m"initial commit"
 4. 
+
+# Add to Heroku
+
+1. heroku login
+2. Inside *pipfile* file check *python_version* for appropriate version
+3. pipenv lock
+4. touch Procfile
+5. Inside Procfile add:
+
+        web: gunicorn pages_project.wsgi --log-file -
+    **Gunicorn** is a *production* server while **Django** own server is a *development* server
+6. pipenv install gunicorn==20.0.4
+7. Inside *pages_project/settings.py* change one-line code **ALLOWED_HOSTS = []** to **ALLOWED_HOSTS = ['*']** this is a security measure against HTTP Host header attacks, * means that all domains are acceptable.
+8. check **git status** for changes we made
