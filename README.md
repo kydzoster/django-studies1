@@ -120,4 +120,5 @@
 11. git push -u origin master
 12. **heroku create** to create a new app on Heroku website
 13. disable static files like CSS and JS with **heroku config:set DISABLE_COLLECTSTATIC=1**
-14. 
+14. heroku ps:scale web=1
+15. heroku open
